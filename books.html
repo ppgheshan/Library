@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LibraryHub | Books</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="sticky top-0 z-40 glass border-b border-slate-200 dark:border-slate-800">
+    <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="font-bold">LibraryHub</a>
+      <div class="flex items-center gap-3 text-sm"><a href="index.html">Home</a><a href="borrow.html">Borrow</a><a href="dashboard.html">Dashboard</a><button id="themeToggle" class="w-9 h-9 rounded-lg border"></button></div>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-10 space-y-6">
+    <h1 class="text-3xl font-bold">Books Collection</h1>
+    <div class="grid md:grid-cols-3 gap-3">
+      <input id="searchInput" type="text" placeholder="Search by title or author..." class="md:col-span-2 px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent" />
+      <select id="categoryFilter" class="px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent">
+        <option>All</option><option>Science</option><option>IT</option><option>Novel</option><option>History</option>
+      </select>
+    </div>
+    <div id="booksGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </main>
+
+  <div id="borrowModal" class="modal fixed inset-0 bg-slate-900/50 z-50 flex items-center justify-center">
+    <div class="bg-white dark:bg-slate-900 p-6 rounded-xl space-y-4 max-w-sm w-full">
+      <h3 class="font-semibold text-lg">Confirm Borrow</h3><p>Do you want to borrow this book?</p>
+      <div class="flex justify-end gap-2"><button id="closeModal" class="px-3 py-2">Cancel</button><button id="confirmBorrow" class="px-3 py-2 rounded bg-blue-600 text-white">Confirm</button></div>
+    </div>
+  </div>
+  <div id="toast" class="toast"></div>
+
+  <script src="js/app.js"></script>
+  <script src="js/books.js"></script>
+</body>
+</html>
