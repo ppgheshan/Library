@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LibraryHub | Book Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="sticky top-0 z-40 glass border-b border-slate-200 dark:border-slate-800">
+    <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="font-bold">LibraryHub</a>
+      <div class="flex gap-3 text-sm"><a href="books.html">Books</a><a href="borrow.html">Borrow</a><button id="themeToggle" class="w-9 h-9 rounded-lg border"></button></div>
+    </nav>
+  </header>
+  <main class="max-w-5xl mx-auto px-4 py-10">
+    <div id="detailsContainer" class="book-card rounded-2xl p-6 grid md:grid-cols-[auto,1fr] gap-6"></div>
+  </main>
+  <div id="toast" class="toast"></div>
+  <script src="js/app.js"></script>
+  <script src="js/details.js"></script>
+</body>
+</html>
